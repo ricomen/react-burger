@@ -1,0 +1,31 @@
+.listItem {
+  width: calc(50% - 10px);
+}
+
+.ingridient {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  height: 100%;
+}
+
+.conunter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-50%);
+}
+
+.price {
+  composes: text text_type_digits-default from global;
+  display: flex;
+  align-items: center;
+}
+
+.name{
+  composes: text text_type_main-default from global
+}

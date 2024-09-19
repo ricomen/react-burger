@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import {useState} from 'react'
+import { AppHeader } from "./components/app-header/index.js";
+import { BurgerIngredients } from "./components/burger-ingredients/index.js";
+import { BurgerConstructor } from "./components/burger-constructor/index.js";
+import {ingredients} from './utils/data.js'
+import "./App.css";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <AppHeader />
+      <main className='pt-10 pr-5 pb-10 pl-5 main'>
+        <h1 className="mb-5 text text_type_main-large">Соберите бургер</h1>
+        <div className="main-content">
+          <BurgerIngredients ingredients={ingredients} className="w-50" />
+          <BurgerConstructor ingredients={ingredients} className="w-50" />
+        </div>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
