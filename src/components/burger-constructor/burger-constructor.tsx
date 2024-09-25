@@ -75,7 +75,7 @@ const BurgerConstructor: FC<PropsWithChildren<IProps>> = ({
         <ConstructorElement
           type="top"
           isLocked={true}
-          text={bun.name}
+          text={`${bun.name} (верх)`}
           price={bun.price}
           thumbnail={bun.image}
           extraClass="pr-4"
@@ -108,7 +108,7 @@ const BurgerConstructor: FC<PropsWithChildren<IProps>> = ({
         <ConstructorElement
           type="bottom"
           isLocked={true}
-          text={bun.name}
+          text={`${bun.name} (низ)`}
           price={bun.price}
           thumbnail={bun.image}
         />
