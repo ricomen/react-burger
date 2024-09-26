@@ -11,6 +11,7 @@
   box-sizing: border-box;
   background-color: transparent;
   height: 100%;
+  composes: text_color_primary from global;
 }
 
 .conunter {
