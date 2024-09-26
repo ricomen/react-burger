@@ -14,7 +14,7 @@ const OrderDetail: FC = () => {
         width={120}
         height="auto"
         aria-hidden={true}
-        alt=""
+        alt="Заказ оформлен"
       />
 
       <p className="m-2 mt-15 text text_type_main-default">

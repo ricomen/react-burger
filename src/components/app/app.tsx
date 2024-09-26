@@ -17,21 +17,28 @@ function App() {
       const getIngredients = async () => {
         const res = await fetch(
           "https://norma.nomoreparties.space/api/ingredients"
-        );
-        const data = await res.json();
-        setIngredients(data.data);
-        setLoading(false);
+        ).then((res) => {
+          if (!res.ok) {
+            setError(true);
+            return Promise.reject(`Ошибка ${res.status}`);
+          }
+          return res;
+        });
+        const { data } = await res.json();
+        setIngredients(data);
       };
       getIngredients();
     } catch (error) {
+
       setError(true);
-      console.error(error)
+      console.error(error);
+
+    } finally {
+
+      setLoading(false);
+      
     }
   }, []);
-
-  useEffect(() => {
-    console.log(ingredients);
-  }, [ingredients]);
 
   return (
     <>

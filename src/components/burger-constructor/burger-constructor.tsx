@@ -41,7 +41,6 @@ const BurgerConstructor: FC<PropsWithChildren<IProps>> = ({
   const [bun, setBun] = useState<IngredientType>(INITIAL_STATE);
   const [totoalSumm, setTotoalSumm] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
-
   const [ingredientsList, setIngredientsList] = useState<IngredientType[]>([]);
 
   const ingredientsWithoutBuns = ingredients.filter(
@@ -59,7 +58,8 @@ const BurgerConstructor: FC<PropsWithChildren<IProps>> = ({
     });
     setIngredientsList(ingredientsWithoutBuns);
     setTotoalSumm(getTotalSumm);
-  }, []);
+
+  }, [ingredients]);
 
   useEffect(() => {
     setTotoalSumm(getTotalSumm);
