@@ -1,0 +1,19 @@
+.burgerIngredients {
+  display: flex;
+  flex-direction: column;
+}
+
+.burgerIngredientsTabs {
+  flex-shrink: 0;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.ingridientList {
+  composes: custom-scroll from global;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  flex-grow: 1;
+  gap: 40px;
+}

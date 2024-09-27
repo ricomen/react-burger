@@ -1,0 +1,17 @@
+.category {
+  width: 100%;
+}
+
+.heading {
+  composes: text text_type_main-medium mb-6 from global 
+
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}

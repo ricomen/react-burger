@@ -1,0 +1,40 @@
+.constructorWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingridientList {
+  margin: 0;
+  padding: 0;
+  composes: custom-scroll from global;
+  overflow-y: auto;
+  flex-grow: 1;
+  list-style: none;
+}
+
+.ingridientItem {
+  composes: mt-4 mb-4 text_color_primary from global
+}
+
+.constructorElement {
+  vertical-align: middle;
+}
+
+.constructorElementIcon {
+  display: inline-block;
+  vertical-align: middle;
+  composes: pr-2 from global
+}
+
+.totalSummWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  composes: mt-4 from global
+}
+
+.totalSummValue {
+  display: flex;
+  align-items: center;
+}
+

@@ -1,0 +1,22 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    min-width: 720px;
+    min-height: 60px;
+    transform: translate(-50%, -50%);
+    background-color: var(--background);
+    border: 2px solid #26264D;
+    border-radius: 40px;
+    composes: p-10 from global;
+    z-index: 9999;
+    box-sizing: border-box;
+
+}
+.close {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    padding: 0;
+    background-color: transparent;
+}
